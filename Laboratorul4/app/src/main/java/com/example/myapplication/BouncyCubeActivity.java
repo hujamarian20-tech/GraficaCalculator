@@ -11,13 +11,11 @@ public class BouncyCubeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Cream vizualizarea OpenGL
         gLView = new GLSurfaceView(this);
 
-        // Setam renderer-ul (motorul de desenare)
-        gLView.setRenderer(new CubeRenderer());
 
-        // Afisam suprafata OpenGL pe tot ecranul
+        gLView.setRenderer(new CubeRenderer(this));
+
         setContentView(gLView);
     }
 
